@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My TODO List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <style>
+      .green {
+        color: rgb(30, 175, 30);
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+      #itemList {
+        font-size: 1.3rem;
+      }
+      .show {
+        display: block;
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav id="ne">
+      <ul>
+        <li class="new">
+          <a href="#home"><b>Home</b></a>
+        </li>
+        <li class="new">
+            <a href="#service"><b>Service</b></a>
+          </li>
+          <li class="new">
+            <a href="#help"><b>Help</b></a>
+          </li>
+        <li class="new">
+          <a href="#contactme"><b>Contact Us</b></a>
+        </li>
+        
+      </ul>
+    </nav>
+    <div class="container">
+      <div class="row">
+        <div class="col mx-auto col-md-8 mt-3 text-center">
+          <div class="alert align-items-center" id="message"></div>
+          <form id="itemForm">
+            <h3 class="headline">TO-DO LIST</h3>
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="itemInput"
+                value=""
+                placeholder="Enter your ToDo work here ..."
+              />
+              <button class="btn btn-outline-primary">ADD ITEM</button>
+            </div>
+          </form>
+          <ul class="nav nav-tabs">
+            <li class="nav-item" data-type="all">
+              <a class="nav-link active" href="#">All</a>
+            </li>
+            <li class="nav-item" data-type="todo">
+              <a class="nav-link" href="#">To-Do</a>
+            </li>
+            <li class="nav-item" data-type="done">
+              <a class="nav-link" href="#">Done</a>
+            </li>
+          </ul>
+          <ul class="list-group list-group-flush" id="itemList"></ul>
+          <input type="hidden" id="filterType" value="all" />
+          <input type="hidden" id="citem" value="" />
+        </div>
+      </div>
+    </div>
+    <button class="printbutton" onclick="window.print()"><b>Print this "To-Do List"</b></button>
+    <script src="todo.js"></script>
+  </body>
+</html>
